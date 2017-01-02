@@ -10,8 +10,8 @@ namespace PrairieKingMadeEasy
 	{
 		private ModConfig Config;
 		/*********
-        ** Public methods
-        *********/
+		** Public methods
+		*********/
 		// Initialise the mod.
 		// Provides methods for interacting with the mod directory, such as reading/writing a config file or custom JSON files.
 		public override void Entry(IModHelper helper)

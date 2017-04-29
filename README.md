@@ -31,5 +31,9 @@ These are the available settings:
 ### 1.0
 * Initial version.
 
+### 1.1
+* Updated for Stardew Valley 1.2 and SMAPI 1.10.
+* Made players invincible by default if they don't edit `config.json`.
+
 ## See also
 * [Discussion thread](http://community.playstarbound.com/threads/prairiekingmadeeasy.113673/)

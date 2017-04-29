@@ -5,7 +5,7 @@
         /*********
         ** Accessors
         *********/
-        public bool AlwaysInvincible { get; set; }
+        public bool AlwaysInvincible { get; set; } = true;
         public bool InfiniteCoins { get; set; }
         public bool InfiniteLives { get; set; }
         public bool RapidFire { get; set; }

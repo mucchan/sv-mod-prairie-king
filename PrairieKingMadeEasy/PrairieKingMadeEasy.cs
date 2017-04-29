@@ -16,10 +16,11 @@ namespace PrairieKingMadeEasy
         /*********
         ** Public methods
         *********/
-        public override void Entry(params object[] objects)
+        /// <summary>The mod entry point, called after the mod is first loaded.</summary>
+        /// <param name="helper">Provides simplified APIs for writing mods.</param>
+        public override void Entry(IModHelper helper)
         {
-            this.Config = new ModConfig();
-            this.Config = this.Config.InitializeConfig(this.BaseConfigPath);
+            this.Config = helper.ReadConfig<ModConfig>();
             GameEvents.UpdateTick += this.Event_UpdateTick;
         }
 

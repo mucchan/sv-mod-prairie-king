@@ -4,19 +4,26 @@ namespace PrairieKingMadeEasy
 {
     public class ModConfig : Config
     {
-        public bool alwaysInvincible { get; set; }
-        public bool infiniteCoins { get; set; }
-        public bool infiniteLives { get; set; }
-        public bool rapidFire { get; set; }
+        /*********
+        ** Accessors
+        *********/
+        public bool AlwaysInvincible { get; set; }
+        public bool InfiniteCoins { get; set; }
+        public bool InfiniteLives { get; set; }
+        public bool RapidFire { get; set; }
 
+
+        /*********
+        ** Public methods
+        *********/
         public override T GenerateDefaultConfig<T>()
         {
-            this.alwaysInvincible = false;
-            this.infiniteCoins = false;
-            this.infiniteLives = false;
-            this.rapidFire = false;
+            this.AlwaysInvincible = false;
+            this.InfiniteCoins = false;
+            this.InfiniteLives = false;
+            this.RapidFire = false;
 
-            return (this as T);
+            return this as T;
         }
     }
 }

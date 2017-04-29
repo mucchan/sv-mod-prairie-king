@@ -1,48 +1,48 @@
 ﻿using System;
-using StardewValley;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
+using StardewValley;
 
 namespace PrairieKingMadeEasy
 {
     public class PrairieKingMadeEasy : Mod
     {
-        public static ModConfig config { get; private set; }
+        /*********
+        ** Properties
+        *********/
+        private ModConfig Config;
 
+
+        /*********
+        ** Public methods
+        *********/
         public override void Entry(params object[] objects)
         {
-            config = new ModConfig();
-            config = config.InitializeConfig<ModConfig>(base.BaseConfigPath);
-            GameEvents.UpdateTick += Event_UpdateTick;
+            this.Config = new ModConfig();
+            this.Config = this.Config.InitializeConfig(this.BaseConfigPath);
+            GameEvents.UpdateTick += this.Event_UpdateTick;
         }
 
-        private static void Event_UpdateTick (object sender, EventArgs e)
+
+        /*********
+        ** Private methods
+        *********/
+        private void Event_UpdateTick(object sender, EventArgs e)
         {
-            if (Game1.currentMinigame != null && "AbigailGame".Equals(Game1.currentMinigame.GetType().Name))
-            {
-                Type minigameType = Game1.currentMinigame.GetType();
+            if (Game1.currentMinigame == null || Game1.currentMinigame.GetType().Name != "AbigailGame")
+                return;
 
-                if (config.infiniteLives)
-                {
-                    minigameType.GetField("lives").SetValue(Game1.currentMinigame, 99);
-                }
+            Type minigameType = Game1.currentMinigame.GetType();
 
-                if (config.infiniteCoins)
-                {
-                    minigameType.GetField("coins").SetValue(Game1.currentMinigame, 99);
-                }
-
-                if (config.rapidFire)
-                {
-                    minigameType.GetField("shootingDelay").SetValue(Game1.currentMinigame, 25);
-                }
-
-                if (config.alwaysInvincible)
-                {
-                    minigameType.GetField("playerInvincibleTimer").SetValue(Game1.currentMinigame, 5000);
-                }
-            }
+            if (this.Config.InfiniteLives)
+                minigameType.GetField("lives").SetValue(Game1.currentMinigame, 99);
+            if (this.Config.InfiniteCoins)
+                minigameType.GetField("coins").SetValue(Game1.currentMinigame, 99);
+            if (this.Config.RapidFire)
+                minigameType.GetField("shootingDelay").SetValue(Game1.currentMinigame, 25);
+            if (this.Config.AlwaysInvincible)
+                minigameType.GetField("playerInvincibleTimer").SetValue(Game1.currentMinigame, 5000);
         }
-      
+
     }
 }

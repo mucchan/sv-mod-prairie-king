@@ -1,29 +1,35 @@
-# PrairieKingMadeEasy
+﻿**Prairie King Made Easy** is a [Stardew Valley](http://stardewvalley.net/) mod that adds cheat
+options for the _Journey of the Prairie King_ minigame.
 
-This is a mod for Stardew Valley which adds cheat options to the minigame *Journey of the Prairie King*.
+Compatible with Stardew Valley 1.2+ on Linux, Mac, and Windows.
 
-### Requirements
+## Contents
+* [Install](#install)
+* [Configure](#configure)
+* [Versions](#versions)
+* [See also](#see-also)
 
-Stardew Modding API (SMAPI) 0.39.2 or above.
+## Install
+1. [Install the latest version of SMAPI](https://github.com/Pathoschild/SMAPI/releases).
+2. [Download the mod](http://community.playstarbound.com/resources/prairiekingmadeeasy.3594/) and
+   unzip it into your `Mods` folder.
+3. Run the game using SMAPI.
 
-### Installation
+## Configure
+The mod will work fine out of the box, but you can tweak its settings by editing the `config.json`
+file with a text editor. The file might only appear after you run the game with the mod installed.
+These are the available settings:
 
-Unpack the mod files into their own directory inside 
-```
-%appdata%\StardewValley\Mods
-```
+| setting           | what it affects
+| ----------------- | -------------------
+| `AlwaysInvincible` | Default `true`. You takes no damage.
+| `InfiniteCoins`     | Default `false`. You always have 99 coins.
+| `InfiniteLives` | Default `false`. You always have 99 lives.
+| `RapidFire` | Default `false`. Your gun shoots a stream of bullets.
 
-### Configuration
+## Versions
+### 1.0
+* Initial version.
 
-A *config.json* file will be generated the first time you run this mod. This file will look like this:
-
-```
-{
-  "alwaysInvincible": false,
-  "infiniteCoins": false,
-  "infiniteLives": false,
-  "rapidFire": false
-}
-```
-
-To enable the feature(s) you want, just set those features to *true*.
+## See also
+* [Discussion thread](http://community.playstarbound.com/threads/prairiekingmadeeasy.113673/)

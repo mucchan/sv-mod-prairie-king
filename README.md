@@ -4,7 +4,7 @@ This is a mod for Stardew Valley which adds cheat options to the minigame *Journ
 
 ### Requirements
 
-Stardew Modding API (SMAPI) 0.39.2 or above.
+Stardew Modding API (SMAPI) 1.2 or above.
 
 ### Installation
 
@@ -22,7 +22,8 @@ A *config.json* file will be generated the first time you run this mod. This fil
   "alwaysInvincible": false,
   "infiniteCoins": false,
   "infiniteLives": false,
-  "rapidFire": false
+  "rapidFire": false,
+  "fireDelay": 25
 }
 ```
 

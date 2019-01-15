@@ -1,22 +1,13 @@
-﻿using StardewModdingAPI;
-
-namespace PrairieKingMadeEasy
+﻿namespace PrairieKingMadeEasy
 {
-    public class ModConfig : Config
+    internal class ModConfig
     {
-        public bool alwaysInvincible { get; set; }
-        public bool infiniteCoins { get; set; }
-        public bool infiniteLives { get; set; }
-        public bool rapidFire { get; set; }
-
-        public override T GenerateDefaultConfig<T>()
-        {
-            this.alwaysInvincible = false;
-            this.infiniteCoins = false;
-            this.infiniteLives = false;
-            this.rapidFire = false;
-
-            return (this as T);
-        }
+        /*********
+        ** Accessors
+        *********/
+        public bool AlwaysInvincible { get; set; } = true;
+        public bool InfiniteCoins { get; set; }
+        public bool InfiniteLives { get; set; }
+        public bool RapidFire { get; set; }
     }
 }

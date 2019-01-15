@@ -1,14 +1,10 @@
 ﻿{
-  "Name": "PrairieKingMadeEasy",
+  "Name": "Prairie King Made Easy",
   "Author": "Mucchan",
-  "Version": {
-    "MajorVersion": 1,
-    "MinorVersion": 0,
-    "PatchVersion": 0,
-    "Build": ""
-  },
-  "Description": "Cheat options for 'Journey of the Prairie King' minigame.",
-  "UniqueID": "",
-  "PerSaveConfigs": false,
-  "EntryDll": "PrairieKingMadeEasy.dll"
+  "Version": "1.0.0",
+  "Description": "Adds cheat options for the 'Journey of the Prairie King' minigame.",
+  "UniqueID": "Mucchan.PrairieKingMadeEasy",
+  "EntryDll": "PrairieKingMadeEasy.dll",
+  "MinimumApiVersion": "2.10.1",
+  "UpdateKeys": [ "Chucklefish:3594" ]
 }
